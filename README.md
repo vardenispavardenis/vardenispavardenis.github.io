@@ -73,11 +73,12 @@ Tuo tarpu brangiausios pasaulio kompanijos yra:
 2. Microsoft
 3. Amazon
 4. Alphabet (Google)
+
 Ką tas reiškia? Tai reiškia, kad pinigų mokant JavaScript tikrai uždirbti
 galima.
 
 Tęsiant kalbą apie patį JavaScript, jums gali kilti klausimas, ką jis daro
-pačiam internetiniam puslapyje. Bet kadangi patys tuoj jį sukursite, greit
+pačiam internetiniam puslapyje. Bet, kadangi patys tuoj jį sukursite, greit
 suprasite.
 
 ### Hello World!
@@ -85,8 +86,77 @@ Pati pirma pamoka kaip naudoti programavimo kalbą yra vadinama "Hello World!",
 nes taip prieš keturiasdešimt metų pirmą C programavimo kalbos pamoką pavadino
 jos kūrėjai.  
 Važiuojam.  
-Atsidarykite "Chrome". Ir spauskite: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows), <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> (OsX). Atsidarys console
-ir tiesiog parasykite:
+Atsidarykite "Chrome". Ir spauskite: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows),
+<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> (OsX). Atsidarys console ir tiesiog
+parašykite:
 ```javascript
 console.log("Hello World!");
 ```
+Spauskite <kbd>Enter</kbd> ir BAAAAM!!! Kątik parašėt savo pirmąją JavaScript programą. Atrodo kietai? Žinau, kad ne. Bet tęsiam.
+
+### Kintamieji
+Kadangi jau esate gimnazijos amžiaus, tikriausiai žinote kas yra kintamasis ir
+dažniausiai jį regite pažymėtą kaip ***X***. JavaScript analogija būtų:
+```javascript
+let x;
+```
+"let" iš anglų kalbos išvertus reiškia "tebūnie". Tai tiesiog kompiuteriui
+pasako, kad *x* šiuo atveju yra kintamasis.  
+Kaip žinote iš matematikos, kintamiesiems galima priskirti vertes ir tai labai
+paprasta JavaScript'e (ir kitose programavimo kalbose).
+```javascript
+x = 100;
+```
+Galima šitą užrašyti ir viena eilute:
+```javascript
+let x = 100;
+```
+
+Grįžkime prie pirmojo pavyzdžio ir pabandome:
+```javascript
+console.log(100); // <--- naudojama 100
+let x = 100;
+console.log(x);   // <--- naudojama x, kurio verte 100
+```
+Kaip matote console'je *100* buvo parašyta du kartus. Taip yra dėl to kad
+pirmoje eilutėje tiesiog sakoma "atspausdink 100", o trečioje sakoma atspausdink
+*x*. Kadangi x nėra kabutėse, tai JavaScript'e reiškia, jog kalbama apie
+kintamąjį ir kompiuteris bandys įstatyti jo vertę.
+Dabar darome refresh <kbd>Ctrl</kbd>+<kbd>R</kbd> pabandykime:
+```javascript
+let x;
+console.log(x);   // <--- undefined, reiskia kad verte niekada nebuvo priskirta
+```
+<kbd>Ctrl</kbd>+<kbd>R</kbd> Ir:
+```javascript
+console.log(x);   // <--- ReferenceError, KAS TAS X???
+                  // Turetu but kintamasis bet niekur nepasakyta.
+```
+
+### Aritmetika
+Kompiuteris yra skaičiuotuvas, tik kietesnis. Žmonės jo labai ta paskirtimi
+nenaudoja, o galėtų. Pradedam aritmetiką.  
+<kbd>Ctrl</kbd>+<kbd>R</kbd>
+```javascript
+let x = 5;
+let y = 3;
+let k = x + y; // <-- suma
+console.log(k);
+k = x - y      // <-- skirtumas
+console.log(k);
+k = x * y      // <-- sandauga
+console.log(k);
+k = x / y      // <-- dalyba
+console.log(k);
+k = x % y      // <-- liekana
+console.log(k);
+```
+Padarome užduotį:  
+1. *Į kintamąjį **s_kvadrato** priskirkime kvadrato kurio sienos ilgis 6 plotą.*  
+2. *Į kintamąjį **s_skritulio** priskirkime skritulio, kurio skersmuo 6 plotą.*  
+3. *Į kintamąjį **s_atlieka** priskirkime plotą kuris atlieka įbrėžus skritulį
+iš **2** į kvadratą iš **1**.*
+
+Iliustracija: ![circle_in_square](./circle_in_square.gif)
+
+### Funkcijos
