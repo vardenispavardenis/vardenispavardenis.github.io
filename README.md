@@ -83,4 +83,10 @@ suprasite.
 ### Hello World!
 Pati pirma pamoka kaip naudoti programavimo kalbą yra vadinama "Hello World!",
 nes taip prieš keturiasdešimt metų pirmą C programavimo kalbos pamoką pavadino
-jos kūrėjai.
+jos kūrėjai.  
+Važiuojam.  
+Atsidarykite "Chrome". Ir spauskite: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows), <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> (OsX). Atsidarys console
+ir tiesiog parasykite:
+```javascript
+console.log("Hello World!");
+```
