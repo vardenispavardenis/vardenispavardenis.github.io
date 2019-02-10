@@ -8,10 +8,10 @@ Paprašyti visų parsisiųsti kol kalbėsiu:
 
 ## Kas išvis tas programavimas?
 Programavimas tai instrukcijų nustatymas kompiuteriui. Kadangi kompiuteriai,
-antraip nei žmonės nėrą protingi ir negali patys sugalvoti kaip jiems išspręsti
-užduotis, jiems reikia tiksliai pasakyti kaip. Gerai tik tai, kad jie sugeba
-atkartoti instrukcijas duotas jiems tobulai. Tobulai reiškia, kad jas atlieka
-reikiamu eiliškumu ir be matematinių ar kitokių klaidų.  
+priešingai nei žmonės nėra protingi ir negali patys sugalvoti, kaip jiems
+išspręsti užduotis, jiems reikia tiksliai tą nurodyti. Gerai tik tai, kad jie
+sugeba atkartoti instrukcijas duotas jiems tobulai. Tobulai reiškia, kad jas
+atlieka reikiamu eiliškumu ir be matematinių ar kitokių klaidų.  
 Kaip pavyzdį duosiu omleto pagaminimą. Instrukcijos kurias duoda mama tau
 kai reikia pagaminti omletą:
 1. Pakepink daržoves keptuvėj.
