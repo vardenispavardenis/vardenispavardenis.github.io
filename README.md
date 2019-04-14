@@ -3,7 +3,7 @@
 Paprašyti visų parsisiųsti kol kalbėsiu:
 1. Chrome naršyklę https://www.google.com/chrome/ .
 2. Git for windows https://git-scm.com/download/win .
-3. Atom https://atom.io .
+3. Visual Studio Code https://code.visualstudio.com/download .
 
 
 ## Kas išvis tas programavimas?
@@ -11,7 +11,7 @@ Programavimas tai instrukcijų nustatymas kompiuteriui. Kadangi kompiuteriai,
 priešingai nei žmonės nėra protingi ir negali patys sugalvoti, kaip jiems
 išspręsti užduotis, jiems reikia tiksliai tą nurodyti. Gerai tik tai, kad jie
 sugeba atkartoti instrukcijas duotas jiems tobulai. Tobulai reiškia, kad jas
-atlieka reikiamu eiliškumu ir be matematinių ar kitokių klaidų.  
+atlieka reikiamu eiliškumu ir be matematinių ar kitokių klaidų.
 Kaip pavyzdį duosiu omleto pagaminimą. Instrukcijos kurias duoda mama tau
 kai reikia pagaminti omletą:
 1. Pakepink daržoves keptuvėj.
@@ -22,7 +22,7 @@ kai reikia pagaminti omletą:
 Kadangi mes, žmonės, suprantam, kaip interpretuoti šias instrukcijas, ir
 elgiamės adekvačiai priklausomai nuo konteksto lengvai pasidarysim valgyt pagal
 tokias instrukcijas. Na žinant mano gaminimo sugebėjimus tikriausiai teks pirkt
-naują keptuvę, bet pavalgęs būčiau.  
+naują keptuvę, bet pavalgęs būčiau.
 Tuo tarpu kompiuteriui neišeitų padaryti nei pirmos užduoties, nei antros, nei
 trečios, nei ketvirtos. Kad jis sugebėtų padaryti kiaušinienę jį turėtų
 ištreniruoti daryti viską smulkiausiomis detalėmis. Na, šiuo atveju tai jau būtų
@@ -42,7 +42,7 @@ Pavyzdys kaip tos pačios instrukcijas reiktų nustatyti kompiuteriui:
 
 Visko nerašiau, nes bučiau visą sekmadienį užtrukęs. Ir tai vistiek nebūtų
 tikslu, nes vien "atsidaryti spintelę" turėtų būti aprašyta smulkiais veiksmais
-kaip rankos kėlimu, traukimu ir panašiai. Užsiknisimas.  
+kaip rankos kėlimu, traukimu ir panašiai. Užsiknisimas.
 Gelbsti tai, kad jei kiti programuotojai jau yra suprogramavę kaip padaryti
 "atsidaryk spintelę ir paimk" veiksmą, galima panaudoti jų instrukcijas vietoj
 rašymo to paties per tą patį.  Prisiminkit šitą, kai mokysimės apie funkcijas.
@@ -84,8 +84,8 @@ suprasite.
 ### Hello World!
 Pati pirma pamoka kaip naudoti programavimo kalbą yra vadinama "Hello World!",
 nes taip prieš keturiasdešimt metų pirmą C programavimo kalbos pamoką pavadino
-jos kūrėjai.  
-Važiuojam.  
+jos kūrėjai.
+Važiuojam.
 Atsidarykite "Chrome". Ir spauskite: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows),
 <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> (OsX). Atsidarys console ir tiesiog
 parašykite:
@@ -101,7 +101,7 @@ dažniausiai jį regite pažymėtą kaip ***X***. JavaScript analogija būtų:
 let x;
 ```
 "let" iš anglų kalbos išvertus reiškia "tebūnie". Tai tiesiog kompiuteriui
-pasako, kad *x* šiuo atveju yra kintamasis.  
+pasako, kad *x* šiuo atveju yra kintamasis.
 Kaip žinote iš matematikos, kintamiesiems galima priskirti vertes ir tai labai
 paprasta JavaScript'e (ir kitose programavimo kalbose).
 ```javascript
@@ -135,7 +135,7 @@ console.log(x);   // <--- ReferenceError, KAS TAS X???
 
 ### Aritmetika
 Kompiuteris yra skaičiuotuvas, tik kietesnis. Žmonės jo labai ta paskirtimi
-nenaudoja, o galėtų. Pradedam aritmetiką.  
+nenaudoja, o galėtų. Pradedam aritmetiką.
 <kbd>Ctrl</kbd>+<kbd>R</kbd>
 ```javascript
 let x = 5;
@@ -151,12 +151,115 @@ console.log(k);
 k = x % y      // <-- liekana
 console.log(k);
 ```
-Padarome užduotį:  
-1. *Į kintamąjį **s_kvadrato** priskirkime kvadrato kurio sienos ilgis 6 plotą.*  
-2. *Į kintamąjį **s_skritulio** priskirkime skritulio, kurio skersmuo 6 plotą.*  
-3. *Į kintamąjį **s_atlieka** priskirkime plotą kuris atlieka įbrėžus skritulį
-iš **2** į kvadratą iš **1**.*
+Padarome užduotį:
+1. *Į kintamąjį **s_kvadrato** priskirkime kvadrato mkurio sienos ilgis 6, plotą.*
+2. *Į kintamąjį **s_skritulio** priskirkime skritulio, kurio skersmuo 6, plotą.*
+3. *Į kintamąjį **s_atlieka** priskirkime plotą, kuris atlieka įbrėžus skritulį iš **2** į kvadratą iš **1**.*
 
 Iliustracija: ![circle_in_square](./circle_in_square.gif)
 
 ### Funkcijos
+Žiūrint į kątik išspręstas formules matome, kad tiesiog pritaikoma formulė. Kadangi iš esmės veiksmas yra tas
+pats, keičiasi tik kintamasis norėtųsi, kad kompiuteris pats pritaikytų formulę. Gerai, kad tai įmanoma ir tam
+yra funkcijos.
+
+***Funkcija*** yra veiksmų seka kuri įvykdoma jai pateikus (arba nepateikus) argumentus.
+Funkcija užrašoma taip:
+```javascript
+function pavadinimas(pirmasArgumentas, antrasArgumentas) {
+    pirmasVeiksmas;
+    antrasVeiksmas;
+    return 5; // Vertė kurią grąžina funkcija
+}
+```
+Viršuje užrašyta funkcija, kurios vardas yra `pavadinimas`, argumentai `pirmasArgumentas` ir `antrasArgumentas`.
+Argumentų galėtų būti ir daugiau. Funkcijos *kūnas* apgaubiamas `{}`. `pirmasVeiksmas` ir `antrasVeiksmas` tai tiesiog kodo eilutės kur gali būti bet kas. Atkreipkite dėmesį į `return` raktažodį. Po `return` raktažodžio sekanti vertė tai ta, kurią funkcija grąžina (kuriai tampa lygi).
+
+Funkcijos naudojamos jas šaukiant taip:
+```javascript
+let sugrazintaVerte = pavadinimas(5, 4);
+```
+Šiuo atveju naudojama funkcija `pavadinimas`, nes jo uždėti skliausteliai. `pirmasArgumentas` yra 5 ir `antrasArgumentas` yra 4. Taip yra, nes 5 yra pirmas skliaustelyje, o 4 antras. `sugrazintaVerte` bus 5,
+nes `pavadinimas` turi `return 5;` gale (visada gražina 5).
+
+Parodysiu labiau praktišką pavyzdį. Prieš tai darytoje užduotyje reikėjo rasti kvadrato plotą. Tai galima užrašyti formule `a*a`, kur `a` tai kvadrato kraštinė. Analogiška funkcija:
+```javascript
+function kvadratoPlotas(krastinesIlgis) {
+    let plotas = krastinesIlgis * krastinesIlgis;
+    return plotas;
+}
+```
+Ši funkcija grąžins kvadrato plotą jai pateikus kraštinės ilgį. Kaip matote galima daryti veiksmus funkcijos viduje ir vėliau grąžinti vertę. Ši funkcija būtų naudojama taip:
+
+```javascript
+let kvadrato6Plotas = kvadratoPlotas(6);
+console.log("Kvadrato, kurio krastine 6 plotas:");
+console.log(kvadrato6Plotas);
+
+let kvadrato10Plotas = kvadratoPlotas(10);
+console.log("Kvadrato, kurio krastine 10 plotas:");
+console.log(kvadrato10Plotas);
+```
+
+Funkcija nebūtinai turi grąžinti vertę. Kartais ji reikalinga dėl šalutinių efektų kaip vertės atspausdinimas ekrane. Pavyzdžiui:
+```javascript
+function graziaiAtspausdinti(vardas, pavarde, profesija) {
+    console.log("Pilietis pavarde " + pavarde + ", vardu " + vardas + ", yra " + profesija);
+}
+```
+Ji būtų naudojama taip:
+```javascript
+graziaiAtspausdinti("Vardenis", "Pavardenis", "Stalius");
+graziaiAtspausdinti("Ignas", "Zilinskas", "Noliferis");
+```
+Panaudojus matome, kad gražiai atspausdinama ir žymiai patogiau užrašyti nei tą ilgą eilutę, kuri yra funkcijoje.
+
+### Logika
+Logika programavime sukuriama naudojantis "jeigu" ir "antraip" komandomis. Anglų kalboje tai būtų `if` ir `else`.
+Kad logika veiktų reikia tam tikros sąlygos, kuri yra tiesa arba ne. Sąlygų pavyzdžiai
+```javascript
+5 < 10; // tiesa, verte 'true'
+5 > 10; // ne tiesa, verte 'false'
+
+5 <= 10; // tiesa, verte 'true'
+5 >= 10; // ne tiesa, verte 'false'
+
+5 == 10;    // palyginimas ar lygu be tipu. Tipai vienodi, bet vertes ne. Gaunasi 'false'.
+'5' == 10;  // palyginimas ar lygu be tipu. Tipai ir vertes skirtingi. Gaunasi 'false'.
+10 == 10;   // palyginimas ar lygu be tipu. Tipai vienodi ir vertes vienodos. Gaunasi 'true'.
+'10' == 10; // palyginimas ar lygu be tipu. Tipai skirtingi, o vertes vienodos. Gaunasi 'true'.
+
+5 === 10;    // palyginimas ar lygu su tipais. Tipai vienodi, bet vertes ne. Gaunasi 'false'.
+'5' === 10;  // palyginimas ar lygu su tipais. Tipai skirtingi, vertes irgi. Gaunasi 'false'.
+10 === 10;   // palyginimas ar lygu su tipais. Tipai vienodi, vertes irgi. Gaunasi 'true'.
+'10' === 10; // palyginimas ar lygu su tipais. Tipai skirtingi, vertes vienodos. Gaunasi 'false'
+```
+Visada naudokite `===` ir `==` nebent jei reikia kritiniu atveju! Jei norite testuoti ar *nelygu* tada reikia naudoti `!==`.
+Dabar panaudokime `if` ir `else` tai labai paprasta:
+```javascript
+if (5 < 10) {
+    console.log("5 maziau uz 10");
+}
+else {
+    console.log("5 daugiau arba lygu 10");
+}
+```
+Kadangi 5 yra mažiau už 10, kodo eilutės esančios `{}` už `if` bus paleistos, o tos kurios yra `{}` už `else` bus praleistos.
+```javascript
+let a = 5;
+let b = 10;
+if (a === b) {
+    console.log("a lygu b");
+}
+else {
+    console.log("a nelygu b");
+}
+```
+Jei nereikia `else` galima jį tiesiog praleisti:
+```javascript
+let k = 10;
+let l = 10;
+if (k === l) {
+    console.log("k lygus l!");
+}
+```
