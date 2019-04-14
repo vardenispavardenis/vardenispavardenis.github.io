@@ -8,57 +8,85 @@
 
     <title>Kryziukai nuliukai</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="static/bootstrap/css/theme/flatly/bootstrap.css" rel="stylesheet">
-
     <style>
-    .grid {
-      margin-top: 10mm;
-    }
-    .grid .row>[class^=col-] {
-      background-color: rgba(255, 154, 2, 0.397);
-      border: 4px solid rgba(37, 17, 0, 0.2);
-      text-align: center;
-      font-size: 10vw;
-    }
-    .grid img {
-      width:  100%;
-      object-fit: scale-down;
-    }
-    .smallGrid {
-      margin-top: 5mm;
-    }
-
-    .smallGrid .row>[class^=col-] {
-      background-color: rgba(3, 117, 83, 0.397);
-      border: 4px solid rgba(0, 22, 13, 0.2);
-      text-align: center;
-      font-size: 6vw;
-    }
+      * {box-sizing: border-box;}
+      .wrapper {
+        width: 60vmin;
+        height: 80vmin;
+        margin: 0 auto;
+      }
+      .wrapper img {
+        width:  16vmin;
+        object-fit: scale-down;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .wrapper > div {
+        border: 2px solid rgb(233,171,88);
+        border-radius: 5px;
+        background-color: rgba(233,171,88,.5);
+        color: #d9480f;
+        text-align: center;
+        font-size: 16vmin;
+      }.wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+      .one {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .two {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .three {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      .four {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .five {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .six {
+        grid-column: 3;
+        grid-row: 2;
+      }
+      .seven {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      .eight {
+        grid-column: 2;
+        grid-row: 3;
+      }
+      .nine {
+        grid-column: 3;
+        grid-row: 3;
+      }
+      .ten {
+        grid-column: 1/4;
+        grid-row: 4;
+      }
     </style>
   </head>
   <body>
-    <div class="container grid">
-        <div class="row">
-            <div onClick="move(this, 0, 0)" class="col-md-2 col-md-offset-3">&nbsp;</div>
-            <div onClick="move(this, 0,1)" class="col-md-2">&nbsp;</div>
-            <div onClick="move(this, 0,2)" class="col-md-2">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div onClick="move(this, 1,0)" class="col-md-2 col-md-offset-3">&nbsp;</div>
-            <div onClick="move(this, 1,1)" class="col-md-2">&nbsp;</div>
-            <div onClick="move(this, 1,2)" class="col-md-2">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div onClick="move(this, 2,0)" class="col-md-2 col-md-offset-3">&nbsp;</div>
-            <div onClick="move(this, 2,1)" class="col-md-2">&nbsp;</div>
-            <div onClick="move(this, 2,2)" class="col-md-2">&nbsp;</div>
-        </div>
-    </div>
-    <div class="smallGrid">
-        <div class="row">
-            <div id="turnIndicator" class="col-md-6 col-md-offset-3">X turn</div>
-        </div>
+    <div class="wrapper">
+        <div onClick="move(this, 0, 0)" class="one">H</div>
+        <div onClick="move(this, 0,1)" class="two"></div>
+        <div onClick="move(this, 0,2)" class="three"></div>
+        <div onClick="move(this, 1,0)" class="four"></div>
+        <div onClick="move(this, 1,1)" class="five"></div>
+        <div onClick="move(this, 1,2)" class="six"></div>
+        <div onClick="move(this, 2,0)" class="seven"></div>
+        <div onClick="move(this, 2,1)" class="eight"></div>
+        <div onClick="move(this, 2,2)" class="nine"></div>
+        <div id="turnIndicator" class="ten">X turn</div>
     </div>
   </body>
   <script>
@@ -71,7 +99,7 @@
       // Pabaigti. (Vietoj doges turetu but X arba O) hehe
       element.innerHTML = "<img src='doge.jpg'/>";
 
-      document.getElementById("turnIndicator").innerHTML = "PAKEISTI";
+      document.getElementById("turnIndicator").innerHTML = "??";
       checkForWin();
     }
     function checkForWin() {
