@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kryziukai nuliukai</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap/css/theme/flatly/bootstrap.css" rel="stylesheet">
+
+    <style>
+    .grid {
+      margin-top: 20mm;
+      display: table;
+    }
+    .grid .row {
+      display: table-row;
+    }
+    .grid .row>[class^=col-] {
+      float: none;
+      display: table-cell;
+
+      background-color: rgba(255, 154, 2, 0.397);
+      border: 4px solid rgba(37, 17, 0, 0.2);
+      text-align: center;
+      font-size: 8vw;
+    }
+    .grid img {
+      width:  100%;
+      object-fit: scale-down;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="grid" class="container grid">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3"><img src="doge.jpg" /></div>
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-2">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">&nbsp;</div>
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-2">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">&nbsp;</div>
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-2">&nbsp;</div>
+        </div>
+    </div>
+  </body>
+  <script>
+    const cells = document.getElementsByClassName("col-md-2");
+      console.log(cells);
+    for (const element of cells) {
+      console.log(element.width);
+      console.log(element.height);
+      element.height=element.width;
+      console.log(element.width);
+      console.log(element.height);
+    }
+  </script>
+</html>
