@@ -268,3 +268,45 @@ Padarome užduotis:
 1. *Naudojantis* `console.log()` *,* `if` *ir* `else` *parašyti funkciją, kuri atspausdina "didesnis", jei funkcijos argumentas didesnis nei 100, ir "ne didesnis" kitu atveju.*
 2. *Parašyti funkciją, kuri atspausdina "didesnis", jei funkcijos argumentasdidesnis nei 100, "vienodas" jei skaičius yra 100 ir "mazesnis" jei argumentas mažesnis.*
 3. *Parašyti funkciją* `atspekVarda(vardas)`*, kuri grąžina* `true`*, jei funkcijos argumentas jūsų vardas, ir `false` kitu atveju.*
+
+## Ciklai
+Dažnai programuojant reikia atlikti tą pačią instrukcijų kombinaciją daug kartų. Tam naudojami ciklai.
+JavaScript `for` ciklas, kuris paleis instrukcijas su `i` vertėmis nuo 0 iki 9:
+```javascript
+for (let i = 0; i < 10; i = i + 1) {
+    console.log(i);
+}
+```
+Sintaksės esminis elementas yra `;`. Prieš pirmąjį kabliataškį esanti instrukcija bus įvykdyta vieną kart prieš pradedant ciklą. Po apačia esantis ciklas yra analogiškas ciklui, kuris yra viršuje, nes prieš pirmąjį kabliataškį buvusi instrukcija parašyta prieš pat ciklą.
+```javascript
+let i = 0;
+for (;i < 10; i = i + 1) {
+    console.log(i);
+}
+```
+Instrukcija esanti po antrojo kabliataškio paleidžiama prieš pat pradedant naują pakartojimą. Šiuo atveju prie esančios `i` vertės pridedame 1. Analogiškas ciklas:
+```javascript
+let i = 0;
+for (;i < 10;) {
+    console.log(i);
+    i = i + 1;
+}
+```
+Instrukcija esanti tarp `;` yra tikrinimo instrukcija ir jei tai nėra tiesa, ciklas nebekartojamas. Analogiškas ciklas:
+```javascript
+let i = 0;
+for (;;) {
+    if (i >= 10) {
+        break; // break baigia cikla
+    }
+    console.log(i);
+    i = i + 1;
+}
+```
+Šiuo atveju buvo panaudota `break` instrukcija, kuri nutraukia ciklą.
+
+Užduotys:
+1. Parašykite ciklą, kuris atspausdins visus skaičius nuo 0 iki 99.
+2. Parašykite ciklą, kuris atspausdins visus lyginius skaičius nuo 0 iki 98.
+3. Parašykite ciklą, kuris atspausdins visų skaičių nuo 0 iki 99 kvadratus.
+4. Parašykite ciklą, kuris atspausdins visų skaičių nuo 0 iki 1000 sumą.
