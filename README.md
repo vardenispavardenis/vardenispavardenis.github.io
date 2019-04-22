@@ -263,3 +263,8 @@ if (k === l) {
     console.log("k lygus l!");
 }
 ```
+
+Padarome užduotis:
+1. *Naudojantis* `console.log()` *,* `if` *ir* `else` *parašyti funkciją, kuri atspausdina "didesnis", jei funkcijos argumentas didesnis nei 100, ir "ne didesnis" kitu atveju.*
+2. *Parašyti funkciją, kuri atspausdina "didesnis", jei funkcijos argumentasdidesnis nei 100, "vienodas" jei skaičius yra 100 ir "mazesnis" jei argumentas mažesnis.*
+3. *Parašyti funkciją* `atspekVarda(vardas)`*, kuri grąžina* `true`*, jei funkcijos argumentas jūsų vardas, ir `false` kitu atveju.*
