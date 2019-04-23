@@ -310,3 +310,13 @@ Užduotys:
 2. Parašykite ciklą, kuris atspausdins visus lyginius skaičius nuo 0 iki 98.
 3. Parašykite ciklą, kuris atspausdins visų skaičių nuo 0 iki 99 kvadratus.
 4. Parašykite ciklą, kuris atspausdins visų skaičių nuo 0 iki 1000 sumą.
+
+## Arrays
+
+```javascript
+let k = [];
+for (let i = 0; i < 100; ++i) {
+    k.push(i);
+}
+console.log(k);
+```
