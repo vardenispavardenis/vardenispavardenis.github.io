@@ -320,3 +320,5 @@ for (let i = 0; i < 100; ++i) {
 }
 console.log(k);
 ```
+
+Dokumentacija https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
