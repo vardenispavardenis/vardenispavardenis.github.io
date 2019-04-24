@@ -101,10 +101,19 @@
       console.log(`Element: ${element}, Row: ${row}, col: ${col}`);
       // Pabaigti. (Vietoj doges turetu but X arba O) hehe
       element.innerHTML = "X"
+
+if(xturn===true){
+element.innerHTML = "X"
+document.getElementById("turnIndicator").innerHTML = "O eile" ;
+}
+else{
+element.innerHTML = "O"
+ document.getElementById("turnIndicator").innerHTML = "X eile";
+}
 xturn=!xturn;
 
 
-      document.getElementById("turnIndicator").innerHTML = xturn;
+      
       checkForWin();
     }
     function checkForWin() {
