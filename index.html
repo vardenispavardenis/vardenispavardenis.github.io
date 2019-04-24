@@ -81,8 +81,8 @@
   <body>
     <div class="wrapper">
         <div onClick="move(this, 0, 0)" class="one"></div>
-        <div onClick="move(this, 0, 1)" class="two"></div>
-        <div onClick="move(this, 0, 2)" class="three"></div>
+        <div onClick="move(this, 0, 1)" class="two"> </div>
+        <div onClick="move(this, 0, 2)" class="three"> </div>
         <div onClick="move(this, 1, 0)" class="four"></div>
         <div onClick="move(this, 1, 1)" class="five"></div>
         <div onClick="move(this, 1, 2)" class="six"></div>
@@ -100,9 +100,11 @@
     function move(element, row, col) {
       console.log(`Element: ${element}, Row: ${row}, col: ${col}`);
       // Pabaigti. (Vietoj doges turetu but X arba O) hehe
-      element.innerHTML = "<img src='doge.jpg'/>";
+      element.innerHTML = "X"
+xturn=!xturn;
 
-      document.getElementById("turnIndicator").innerHTML = "??";
+
+      document.getElementById("turnIndicator").innerHTML = xturn;
       checkForWin();
     }
     function checkForWin() {
