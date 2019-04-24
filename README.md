@@ -322,3 +322,10 @@ console.log(k);
 ```
 
 Dokumentacija https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+## Uzduotis
+Įsijunkite `git bash` programą nuo ant darbalaukio. Ir joje parašykite komandas:
+```bash
+cd Desktop
+git clone https://github.com/ignaszi/js_prog_kursas.git
+```
