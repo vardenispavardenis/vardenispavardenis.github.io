@@ -94,10 +94,12 @@
   </body>
   <script>
     let xturn = true;
+let n=0;
     const state = [['-', '-', '-'],
                    ['-', '-', '-'],
                    ['-', '-', '-']];
     function move(element, row, col) {
+if(n<1){
 if(state[row][col]==='-'){
       console.log(`Element: ${element}, Row: ${row}, col: ${col}`);
       // Pabaigti. (Vietoj doges turetu but X arba O) hehe
@@ -114,66 +116,63 @@ element.innerHTML = "O"
  document.getElementById("turnIndicator").innerHTML = "X eile";
 state[row][col]="O"
 }
+
+xturn=!xturn; 
 }
-xturn=!xturn;
 
-
-      
       checkForWin(element, row, col);
-    }
+  }
+if(state[0][0]!=="-" && state[0][1]!=="-" && state[0][2]!=="-" && state[1][0]!=="-" && state[1][1]!=="-" && state[1][2]!=="-" && state[2][0]!=="-" && state[2][1]!=="-" && state[2][2]!=="-"){
+ document.getElementById("turnIndicator").innerHTML = "lygiosios";
+}
+
+}
     function checkForWin(element, row, col) {
-if ( state[0][0]==="X" && state[0][1]==="X" && state[0][2]==="X" ){
+for( let i=0; i<3; i++){
+if(state[i][0]==="X" && state[i][1]==="X" && state[i][2]==="X"){
+document.getElementById("turnIndicator").innerHTML = "X laimejo";
+n=1;
+return n;
+}
+if ( state[0][i]==="X" && state[1][i]==="X" && state[2][i]==="X" ){
  document.getElementById("turnIndicator").innerHTML = "X laimejo";
+n=1;
+return n; 
 }
-if ( state[1][0]==="X" && state[1][1]==="X" && state[1][2]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
+if(state[i][0]==="O" && state[i][1]==="O" && state[i][2]==="O"){
+document.getElementById("turnIndicator").innerHTML = "O laimejo"; 
+n=1;
+return n;
 }
-if ( state[2][0]==="X" && state[2][1]==="X" && state[2][2]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
-}
-if ( state[0][0]==="X" && state[1][0]==="X" && state[1][0]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
-}
-if ( state[0][1]==="X" && state[1][1]==="X" && state[1][1]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
-}
-if ( state[0][2]==="X" && state[1][2]==="X" && state[1][2]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
-}
-if ( state[0][0]==="X" && state[1][1]==="X" && state[2][2]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
-}
-if ( state[0][2]==="X" && state[1][1]==="X" && state[2][0]==="X" ){
- document.getElementById("turnIndicator").innerHTML = "X laimejo";
-}
-
-
-if ( state[0][0]==="O" && state[0][1]==="O" && state[0][2]==="O" ){
+if ( state[0][i]==="O" && state[1][i]==="O" && state[2][i]==="O" ){
  document.getElementById("turnIndicator").innerHTML = "O laimejo";
+n=1;
+return n;
 }
-if ( state[1][0]==="O" && state[1][1]==="O" && state[1][2]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
 }
-if ( state[2][0]==="O" && state[2][1]==="O" && state[2][2]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
+if(state[0][0]==="X" && state[1][1]==="X" && state[2][2]==="X"){
+document.getElementById("turnIndicator").innerHTML = "X laimejo"; 
+n=1;
+return n;
 }
-if ( state[0][0]==="O" && state[1][0]==="O" && state[1][0]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
+if(state[0][2]==="X" && state[1][1]==="X" && state[2][0]==="X"){
+document.getElementById("turnIndicator").innerHTML = "X laimejo"; 
+n=1;
+return n;
 }
-if ( state[0][1]==="O" && state[1][1]==="O" && state[1][1]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
+if(state[0][0]==="O" && state[1][1]==="O" && state[2][2]==="O"){
+document.getElementById("turnIndicator").innerHTML = "O laimejo"; 
+n=1;
+return n;
 }
-if ( state[0][2]==="O" && state[1][2]==="O" && state[1][2]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
+if(state[0][2]==="O" && state[1][1]==="O" && state[2][0]==="O"){
+document.getElementById("turnIndicator").innerHTML = "O laimejo"; 
+n=1;
+return n;
 }
-if ( state[0][0]==="O" && state[1][1]==="O" && state[2][2]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
-}
-if ( state[0][2]==="O" && state[1][1]==="O" && state[2][0]==="O" ){
- document.getElementById("turnIndicator").innerHTML = "O laimejo";
 }
    
 
-    }
+    
   </script>
 </html>
